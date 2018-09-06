@@ -1,0 +1,4 @@
+C:\Users\pgoel\source\repos\CartApplication\CartApplication\obj\Debug\CartApplication.csprojResolveAssemblyReference.cache
+C:\Users\pgoel\source\repos\CartApplication\CartApplication\obj\Debug\CartApplication.csproj.CoreCompileInputs.cache
+C:\Users\pgoel\Desktop\git\cartapplicationfinal\CartApplication\CartApplication\obj\Debug\CartApplication.csprojAssemblyReference.cache
+C:\Users\pgoel\Desktop\git\cartapplicationfinal\CartApplication\CartApplication\obj\Debug\CartApplication.csproj.CoreCompileInputs.cache
