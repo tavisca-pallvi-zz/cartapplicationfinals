@@ -7,15 +7,15 @@ namespace CartApplication.Models
 {
     public class CardPayment:Ipayment
     {
-        private int cardNo;
-        private int expirydate;
-        private int cvv;
+        //private int cardNo;
+        //private int expirydate;
+        //private int cvv;
       
-        public void paymentMethod(Items item)
+        public void paymentMethod(float cashAmount)
         {
- 
-            //total price 
-    }
+            Console.WriteLine("Payable Amount:" + cashAmount);
+
+        }
 
 }
 }

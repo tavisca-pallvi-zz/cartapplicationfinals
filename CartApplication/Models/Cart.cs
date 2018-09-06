@@ -12,31 +12,39 @@ namespace CartApplication.Models
         private int quantity;
         public List<Items>itemAdded;
         public int totalPrice;
-        Ipayment paymentType;
+      
 
-       public void CheckOut(Items item)
+       public void CheckOut(Ipayment paymentType, ItemPrice calItemPrice)
         {
-            paymentType.paymentMethod(item);
+            calItemPrice.CalculateTotalPrice(paymentType, itemAdded);
+          
         }
  
       
-        public void showItems()
+        public void ShowItems()
         {
+            foreach(Items item in itemAdded)
+            {
+                Console.WriteLine(item);
+            }
 
         }
-        public void clear()
+        public void ClearItems()
         {
-
+                itemAdded.Clear();
+            
         }
 
         public void AddItemIn( Items item)
+
         {
-            //    ob.itemAdded.push();
+
+            itemAdded.Add(item);
 
         }
-        public void remove(Items item)
+        public void Remove(Items item)
         {
-            //    ob.itemAdded.push();
+            itemAdded.Remove(item);
 
         }
         

@@ -10,39 +10,56 @@ namespace CartApplication.Models
     {
         //created a cart
         Cart cart = new Cart();
-        List<Items> items =
-    new List<Items>()   {
-        new Items
-        {
-             itemName="Bag",
-             itemId=1,
-             itemQty=2,
-             itemPrice=100,
-        },
-          new Items
-        {
-             itemName="Top",
-             itemId=1,
-             itemQty=2,
-             itemPrice=500,
-        },
 
-    };
-    void mainfun()
+        void mainfun()
         {
-            char c = Console.ReadKey().KeyChar;
-
+            int opt, pmethod;
+            Console.WriteLine("Enter which operation you want to perform 1: display cart 2: Add to cart 3: Remove item from cart 4: clear cart 5: Purchase items from the cart");
+            opt = Int32.Parse(Console.ReadLine());
             Items item = new Items();
-            Console.WriteLine(");
-            cart.AddItemIn(item);
-            cart.remove(item);
-         
-            //cart.SetCardPayment();
-            cart.CheckOut(item);
-            
+            ItemPrice calculateItemPrice;
 
+            Ipayment paymentType;
 
+            switch (opt)
+            {
+                case 1:
+                    cart.ShowItems();
+                    break;
+                case 2:
+                    Console.WriteLine("enter the item details you wnat to add");
+                    Console.WriteLine("enter itemName");
+
+                    item.itemName = Console.ReadLine();
+                    Console.WriteLine("enter itemPrice");
+                    item.itemPrice = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine("enter itemQty");
+                    item.itemQty = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine("enter itemId");
+                    item.itemId = Int32.Parse(Console.ReadLine());
+                    cart.AddItemIn(item);
+                    break;
+                case 3:
+                    cart.Remove(item);
+                    break;
+                case 4:
+                    cart.ClearItems();
+                    break;
+                case 5:
+                    pmethod = Int32.Parse(Console.ReadLine());
+                    if (pmethod == 1)
+
+                        paymentType = new CardPayment();
+                    else
+
+                        paymentType = new CashPayment();
+                    calculateItemPrice = new ItemPrice();
+
+                    cart.CheckOut(paymentType, calculateItemPrice);
+                    break;
+            }
         }
     }
 
-    }
+
+}

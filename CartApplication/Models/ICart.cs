@@ -10,8 +10,8 @@ namespace CartApplication.Models
     {
         void AddItemIn(Items item);
         void Remove( Items item);
-        void ShowItems(Items item);
-        void ClearItems(Items item);
+        void ShowItems();
+        void ClearItems();
 
     }
 }

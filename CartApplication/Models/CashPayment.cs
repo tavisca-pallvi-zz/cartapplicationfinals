@@ -8,8 +8,9 @@ namespace CartApplication.Models
     public class CashPayment:Ipayment
     {
       
-        public void paymentMethod(Items item)
+        public void paymentMethod(float cashAmount)
         {
+            Console.WriteLine("Payable Amount:" + cashAmount);
 
         }
     }

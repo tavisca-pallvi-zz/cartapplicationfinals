@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CartApplication.Models
 {
-    interface Ipayment
+   public interface Ipayment
     {
         
-        void payment(Items item);
+        void paymentMethod(float cashamount);
        
     }
 }

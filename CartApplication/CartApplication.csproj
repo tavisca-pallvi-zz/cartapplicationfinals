@@ -143,6 +143,7 @@
     <Compile Include="Models\CashPayment.cs" />
     <Compile Include="Models\ICart.cs" />
     <Compile Include="Models\Ipayment.cs" />
+    <Compile Include="Models\ItemPrice.cs" />
     <Compile Include="Models\Items.cs" />
     <Compile Include="Models\MainProgram.cs" />
     <Compile Include="Models\PaymentType.cs" />

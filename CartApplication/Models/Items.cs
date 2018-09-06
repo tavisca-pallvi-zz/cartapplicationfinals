@@ -12,6 +12,6 @@ namespace CartApplication.Models
         public int itemQty;
         public float itemPrice;
 
-        
+       
     }
 }
